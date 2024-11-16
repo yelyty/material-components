@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       css={css`
-        ${baseButtonStyles};
+        ${baseButtonStyles(theme)};
         ${variantStyles(variant, theme, disabled)};
       `}
       onClick={onClick}

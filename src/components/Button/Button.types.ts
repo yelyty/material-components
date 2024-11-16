@@ -1,1 +1,1 @@
-export type ButtonVariant = "filled" | "outlined" | "text";
+export type ButtonVariant = "filled" | "outlined" | "text" | "tonal" | "elevated";

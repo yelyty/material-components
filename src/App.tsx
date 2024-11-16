@@ -5,11 +5,39 @@ import Button from "./components/Button/Button";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Button
-        variant="filled"
-        label="Click Me"
-        onClick={() => alert("Button clicked")}
-      />
+      <div style={{ display: "flex", gap: 10 }}>
+        <Button
+          variant="filled"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          disabled
+          variant="filled"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          variant="outlined"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          variant="text"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          variant="tonal"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          variant="elevated"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+      </div>
     </ThemeProvider>
   );
 }
