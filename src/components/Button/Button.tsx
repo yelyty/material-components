@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import React from "react";
-import { baseButtonStyles, variantStyles } from "./Button.styles";
+import { baseButtonStyles, labelStyles, variantStyles } from "./Button.styles";
 import { ButtonVariant } from "./Button.types";
 
 interface ButtonProps {
@@ -29,7 +29,13 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       aria-disabled={disabled}
     >
-      {label}
+      <span
+        css={css`
+          ${labelStyles(variant, disabled)};
+        `}
+      >
+        {label}
+      </span>
     </button>
   );
 };

@@ -23,6 +23,18 @@ function App() {
           onClick={() => alert("Button clicked")}
         />
         <Button
+          disabled
+          variant="outlined"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          variant="text"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          disabled
           variant="text"
           label="Click Me"
           onClick={() => alert("Button clicked")}
@@ -33,6 +45,18 @@ function App() {
           onClick={() => alert("Button clicked")}
         />
         <Button
+          disabled
+          variant="tonal"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          variant="elevated"
+          label="Click Me"
+          onClick={() => alert("Button clicked")}
+        />
+        <Button
+          disabled
           variant="elevated"
           label="Click Me"
           onClick={() => alert("Button clicked")}
