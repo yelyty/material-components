@@ -21,6 +21,14 @@ const Item = ({ children }: ItemProps) => {
   return <li>{children}</li>;
 };
 
+type LeadingMedia = {
+  url: string;
+};
+
+const LeadingMedia = ({ url }: LeadingMedia) => {
+  return <img src={url} />;
+};
+
 type HeadlineProps = {
   text: string;
 };
@@ -72,7 +80,18 @@ const Divider = () => {
   return <hr />;
 };
 
+type TrailingSelectionControlProps = {
+  children: React.ReactNode;
+};
+
+const TrailingSelectionControl = ({
+  children,
+}: TrailingSelectionControlProps) => {
+  return <>{children}</>;
+};
+
 List.Item = Item;
+List.LeadingMedia = LeadingMedia;
 List.Headline = Headline;
 List.SupportingText = SupportingText;
 List.TrailingSupportingText = TrailingSupportingText;
@@ -80,5 +99,6 @@ List.LeadingIcon = LeadingIcon;
 List.LeadingAvatar = LeadingAvatar;
 List.TrailingIcon = TrailingIcon;
 List.Divider = Divider;
+List.TrailingSelectionControl = TrailingSelectionControl;
 
 export default List;
