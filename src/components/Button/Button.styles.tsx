@@ -96,6 +96,13 @@ export const variantStyles = (
         box-shadow: ${disabled
           ? theme.elevation.level0
           : theme.elevation.level1};
+
+        ${!disabled &&
+        css`
+          &:hover {
+            box-shadow: ${theme.elevation.level2};
+          }
+        `}
       `;
     default:
       return css``;
