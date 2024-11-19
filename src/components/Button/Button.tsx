@@ -2,14 +2,7 @@
 import { css, useTheme } from "@emotion/react";
 import React from "react";
 import { baseButtonStyles, labelStyles, variantStyles } from "./Button.styles";
-import { ButtonVariant } from "./Button.types";
-
-interface ButtonProps {
-  variant?: ButtonVariant;
-  label: string;
-  onClick: () => void;
-  disabled?: boolean;
-}
+import { ButtonProps } from "./Button.types";
 
 const Button: React.FC<ButtonProps> = ({
   variant = "filled",

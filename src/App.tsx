@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@emotion/react";
 import theme from "./components/theme";
 import Button from "./components/Button/Button";
+import { List } from "./components/List";
 
 function App() {
   return (
@@ -62,6 +63,15 @@ function App() {
           onClick={() => alert("Button clicked")}
         />
       </div>
+      <List>
+        <List.Item>
+          <List.Headline text="Headline" />
+          <List.SupportingText text="Supporting Text" />
+          <List.TrailingSupportingText text="Trailing Supporting Text" />
+          <List.LeadingIcon icon={<span>👍</span>} />
+          <List.TrailingIcon icon={<span>👎</span>} />
+        </List.Item>
+      </List>
     </ThemeProvider>
   );
 }
