@@ -1,6 +1,7 @@
 // theme.ts
 import { Theme } from '@emotion/react';
 
+
 const theme: Theme = {
 	color: {
 		// Primary colors
@@ -98,13 +99,19 @@ const theme: Theme = {
 		dragged: 'rgba(125, 78, 125, 0.16)',    // 16% opacity for dragged
 	},
 	typography: {
-		fontFamily: `'Roboto', sans-serif`, // Default font family
-		fontSize: '16px',  // Default font size
-		fontWeightMedium: 500,
-		button: {
-			textTransform: 'uppercase', // MD3 buttons are uppercase by default
-			fontWeight: 500,
-		},
+		body: {
+			large: {
+				lineHeight: '24px',
+				fontSize: '16px',
+				letterSpacing: '0.5px',
+			},
+			medium: {
+				lineHeight: '20px',
+				fontSize: '14px',
+				letterSpacing: '0.25px',
+			}
+		}
+
 	},
 };
 

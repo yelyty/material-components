@@ -1,24 +1,50 @@
+/** @jsxImportSource @emotion/react */
+import { css, useTheme } from "@emotion/react";
 import { ReactElement } from "react";
+import {
+  listItemStyles,
+  listStyles,
+  headlineStyles,
+  supportingTextStyles,
+} from "./List.styles";
 
 type ListProps = {
-  children: React.ReactNode;
+  children: React.ReactElement;
 };
 const List = ({ children }: ListProps) => {
-  return <ul>{children}</ul>;
+  return (
+    <ul
+      css={css`
+        ${listStyles}
+      `}
+    >
+      {children}
+    </ul>
+  );
 };
 
 type ItemProps = {
-  children: [
-    ReactElement<typeof Headline>,
-    ReactElement<typeof SupportingText>?,
-    ReactElement<typeof TrailingSupportingText>?,
-    ReactElement<typeof LeadingIcon>?,
-    ReactElement<typeof LeadingAvatar>?,
-    ReactElement<typeof TrailingIcon>?,
-  ];
+  children:
+    | ReactElement<typeof Headline>
+    | [
+        ReactElement<typeof Headline>,
+        ReactElement<typeof SupportingText>?,
+        ReactElement<typeof TrailingSupportingText>?,
+        ReactElement<typeof LeadingIcon>?,
+        ReactElement<typeof LeadingAvatar>?,
+        ReactElement<typeof TrailingIcon>?,
+      ];
 };
-const Item = ({ children }: ItemProps) => {
-  return <li>{children}</li>;
+const Item: React.FC<ItemProps> = ({ children }) => {
+  return (
+    <li
+      css={css`
+        ${listItemStyles}
+      `}
+    >
+      {children}
+    </li>
+  );
 };
 
 type LeadingMedia = {
@@ -34,14 +60,33 @@ type HeadlineProps = {
 };
 
 const Headline = ({ text }: HeadlineProps) => {
-  return <h1>{text}</h1>;
+  const theme = useTheme();
+  return (
+    <h3
+      className="text-group"
+      css={css`
+        ${headlineStyles(theme)}
+      `}
+    >
+      {text}
+    </h3>
+  );
 };
 
 type SupportingTextProps = {
   text: string;
 };
 const SupportingText = ({ text }: SupportingTextProps) => {
-  return <p>{text}</p>;
+  const theme = useTheme();
+  return (
+    <p
+      css={`
+        ${supportingTextStyles(theme)}
+      `}
+    >
+      {text}
+    </p>
+  );
 };
 
 type TrailingSupportingTextProps = {

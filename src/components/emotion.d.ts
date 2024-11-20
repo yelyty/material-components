@@ -98,13 +98,19 @@ declare module '@emotion/react' {
 			dragged: string;
 		};
 		typography: {
-			fontFamily: string;
-			fontSize: string;
-			fontWeightMedium: number;
-			button: {
-				textTransform: string;
-				fontWeight: number;
-			};
+			body: {
+				large: {
+					lineHeight: string;
+					fontSize: string;
+					letterSpacing: string;
+				}
+				medium: {
+					lineHeight: string;
+					fontSize: string;
+					letterSpacing: string;
+				}
+
+			}
 		};
 	}
 }

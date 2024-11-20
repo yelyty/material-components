@@ -67,9 +67,6 @@ function App() {
         <List.Item>
           <List.Headline text="Headline" />
           <List.SupportingText text="Supporting Text" />
-          <List.TrailingSupportingText text="Trailing Supporting Text" />
-          <List.LeadingIcon icon={<span>👍</span>} />
-          <List.TrailingIcon icon={<span>👎</span>} />
         </List.Item>
       </List>
     </ThemeProvider>
