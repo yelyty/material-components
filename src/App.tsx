@@ -2,6 +2,9 @@ import { ThemeProvider } from "@emotion/react";
 import theme from "./components/theme";
 import Button from "./components/Button/Button";
 import { List } from "./components/List";
+import { Card } from "./components/Card";
+import { CardMedia } from "./components/CardMedia";
+import { CardActions } from "./components/CardActions";
 
 function App() {
   return (
@@ -69,6 +72,56 @@ function App() {
           <List.SupportingText text="Supporting Text" />
         </List.Item>
       </List>
+      <div style={{ display: "flex", gap: 8 }}>
+        <Card variant="elevated" customCss={{ width: 300 }}>
+          <Button
+            variant="filled"
+            label="Click Me"
+            onClick={() => alert("Button clicked")}
+          />
+        </Card>
+        <Card variant="outlined" customCss={{ width: 300 }}>
+          <Button
+            variant="filled"
+            label="Click Me"
+            onClick={() => alert("Button clicked")}
+          />
+        </Card>
+        <Card variant="filled" customCss={{ width: 450 }}>
+          <CardActions justifyContent="flex-start">
+            <Button
+              variant="outlined"
+              label="Click Me"
+              onClick={() => alert("Button clicked")}
+            />
+            <Button
+              variant="filled"
+              label="Click Me"
+              onClick={() => alert("Button clicked")}
+            />
+          </CardActions>
+        </Card>
+        <Card variant="filled" customCss={{ width: 450 }}>
+          <CardMedia
+            component="img"
+            src="https://picsum.photos/seed/picsum/200/300"
+            alt="placeholder"
+            customCss={{ height: 100 }}
+          />
+          <CardActions>
+            <Button
+              variant="outlined"
+              label="Click Me"
+              onClick={() => alert("Button clicked")}
+            />
+            <Button
+              variant="filled"
+              label="Click Me"
+              onClick={() => alert("Button clicked")}
+            />
+          </CardActions>
+        </Card>
+      </div>
     </ThemeProvider>
   );
 }
