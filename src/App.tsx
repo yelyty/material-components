@@ -5,6 +5,8 @@ import { List } from "./components/List";
 import { Card } from "./components/Card";
 import { CardMedia } from "./components/CardMedia";
 import { CardActions } from "./components/CardActions";
+import { Chip } from "./components/Chip";
+import { ChipGroup } from "./components/ChipGroup";
 
 function App() {
   return (
@@ -122,6 +124,11 @@ function App() {
           </CardActions>
         </Card>
       </div>
+      <ChipGroup customCss={{ paddingTop: 16, paddingBottom: 16 }}>
+        <Chip label="Chip" />
+        <Chip label="Label" variant="elevated" />
+        <Chip label="Another label" variant="outlined" />
+      </ChipGroup>
     </ThemeProvider>
   );
 }
